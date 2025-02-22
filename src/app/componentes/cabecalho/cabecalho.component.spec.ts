@@ -24,4 +24,13 @@ describe('CabecalhoComponent', () => {
     expect(component.alt).toBeDefined();
     expect(component.src).toBeDefined();
   });
+
+  it('deveria renderizar o conteúdo baseado nas propriedades alt e src', () => {
+    // Arrange
+    component.alt = 'Logo do Sistema';
+    component.src = 'assets/logo.png';
+
+    // Act & Assert
+    expect(component).toMatchSnapshot();
+  });
 });
