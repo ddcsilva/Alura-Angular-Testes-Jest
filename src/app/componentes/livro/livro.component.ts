@@ -7,12 +7,9 @@ import { AvaliacaoEstrelasComponent } from '../avaliacao-estrelas/avaliacao-estr
 @Component({
   selector: 'app-livro',
   standalone: true,
-  imports: [
-    CommonModule,
-    AvaliacaoEstrelasComponent
-  ],
+  imports: [CommonModule, AvaliacaoEstrelasComponent],
   templateUrl: './livro.component.html',
-  styleUrl: './livro.component.css'
+  styleUrl: './livro.component.css',
 })
 export class LivroComponent {
   @Input() livro!: Livro;

@@ -5,7 +5,7 @@ import { Component, Input } from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './rodape.component.html',
-  styleUrl: './rodape.component.css'
+  styleUrl: './rodape.component.css',
 })
 export class RodapeComponent {
   @Input() src = '';
