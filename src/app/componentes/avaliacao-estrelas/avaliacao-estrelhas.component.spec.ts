@@ -77,4 +77,17 @@ describe('AvaliacaoEstrelasComponent', () => {
     expect(onChangeSpy).not.toHaveBeenCalled;
     expect(component.classificacao).not.toBe(classificacao);
   });
+
+  it('deveria ignorar valores inválidos e atribuir o valor 1 para a classificação', () => {
+    // Arrange
+    const valoresInvalidos = [-1, 0, 'abc', undefined];
+
+    valoresInvalidos.forEach((valorInvalido) => {
+      // Act
+      component.writeValue(valorInvalido as any);
+
+      // Assert
+      expect(component.classificacao).toBe(1);
+    });
+  });
 });
