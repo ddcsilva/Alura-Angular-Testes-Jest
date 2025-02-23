@@ -90,4 +90,17 @@ describe('AvaliacaoEstrelasComponent', () => {
       expect(component.classificacao).toBe(1);
     });
   });
+
+  it('deveria atualizar o DOM quando a classificação for alterada', () => {
+    // Arrange
+    const classificacao = 3;
+
+    // Act
+    component.classificar(classificacao);
+    fixture.detectChanges();
+    const estrelaPreenchida = fixture.nativeElement.querySelector('.filled');
+
+    // Assert
+    expect(estrelaPreenchida).toBeTruthy();
+  });
 });
