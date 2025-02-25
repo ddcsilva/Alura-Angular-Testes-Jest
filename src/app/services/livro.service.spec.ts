@@ -51,6 +51,14 @@ describe('LivroService', () => {
     expect(livrosPorGenero).toEqual(livrosEsperados);
   });
 
+  it('deveria recuperar array vazio ao buscar livros de um gênero inexistente', () => {
+    // Act
+    const livrosPorGenero = service.obterLivrosPorGenero('epico');
+
+    // Assert
+    expect(livrosPorGenero).toEqual([]);
+  });
+
   it('deveria inicializar os gêneros literários corretamente', () => {
     // Arrange
     const generosEsperados: GeneroLiterario[] = [
